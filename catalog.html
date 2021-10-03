@@ -4,11 +4,12 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Девайс Каталог</title>
+	<link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
 	<header class="page-header">
-		<img class="page-header__logo" src="" alt="Логотип Device">
+		<img class="page-header__logo" src="/img/logo-device.svg" alt="Логотип Device" width="145" height="36">
 		<nav class="page-header__navigation">
 
 			<ul class="navigation__list navigation-user">
@@ -154,18 +155,18 @@
 					<option value="expensive">Сначала дорогое</option>
 				</select>
 				<button class="visually-hidden" type="submit">Отсортировать продукты</button>
+				<a href="#" class="button button-light">
+					<span class="visually-hidden">Сортировка от большего к меньшему</span>
+				</a>
+				<a href="#" class="button">
+					<span class="visually-hidden">Сортировка от меньшего к большему</span>
+				</a>
 			</form>
-			<a href="#" class="button button-light">
-				<span class="visually-hidden">Сортировка от большего к меньшему</span>
-			</a>
-			<a href="#" class="button">
-				<span class="visually-hidden">Сортировка от меньшего к большему</span>
-			</a>
 
 			<ul class="product-card__list">
 				<li class="product-card">
 					<a class="product-card__link" href="product.html">
-						<img class="product-card__image" src="" alt="">
+						<img class="product-card__image" src="/img/catpage-product-1.jpg" alt="" width="360" height="380">
 						<h3 class="product-card-title">Любительская селфи-палка</h3>
 					</a>
 					<b class="product-card__price">500 ₽</b>
@@ -174,7 +175,7 @@
 
 				<li class="product-card">
 					<a class="product-card__link" href="product.html">
-						<img class="product-card__image" src="" alt="">
+						<img class="product-card__image" src="/img/catpage-product-2.jpg" alt="" width="360" height="380">
 						<h3 class="product-card-title">Профессиональная<br>селфи-палка</h3>
 					</a>
 					<b class="product-card__price">1500 ₽</b>
@@ -183,7 +184,7 @@
 
 				<li class="product-card">
 					<a class="product-card__link" href="product.html">
-						<img class="product-card__image" src="" alt="">
+						<img class="product-card__image" src="/img/catpage-product-3.jpg" alt="" width="360" height="380">
 						<h3 class="product-card-title">Непотопляемая<br>селфи-палка</h3>
 					</a>
 					<b class="product-card__price">2500 ₽</b>
@@ -192,7 +193,7 @@
 
 				<li class="product-card product-card_new">
 					<a class="product-card__link" href="product.html">
-						<img class="product-card__image" src="" alt="">
+						<img class="product-card__image" src="/img/catpage-product-4.jpg" alt="" width="360" height="380">
 						<h3 class="product-card-title">Селфи-палка «Следуй<br>за мной»</h3>
 					</a>
 					<b class="product-card__price">4900 ₽</b>
@@ -228,7 +229,7 @@
 	</main>
 
 	<footer class="page-footer">
-		<img class="page-footer__logo" src="" alt="Логотип Device">
+		<img class="page-footer__logo" src="/img/logo-device-footer.svg" alt="Логотип Device" width="145" height="36">
 		<address class="page-footer__address">
 			<a href="#" class="page-footer__address-text">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</a>
 		</address>
@@ -249,22 +250,23 @@
 		<div class="page-footer__divider"></div>
 		<ul class="socials__list">
 			<li class="socials__item">
-				<a class="socials__link" href="https://www.facebook.com/htmlacademy">
+				<a class="socials__link socials__link-1" href="https://www.facebook.com/htmlacademy">
 					<span class="visually-hidden">Facebook</span>
 				</a>
 			</li>
 			<li class="socials__item">
-				<a class="socials__link" href="https://www.instagram.com/htmlacademy/">
+				<a class="socials__link socials__link-2" href="https://www.instagram.com/htmlacademy/">
 					<span class="visually-hidden">Instagram</span>
 				</a>
 			</li>
 			<li class="socials__item">
-				<a class="socials__link" href="https://twitter.com/htmlacademy_ru">
+				<a class="socials__link socials__link-3" href="https://twitter.com/htmlacademy_ru">
 					<span class="visually-hidden">Twitter</span>
 				</a>
 			</li>
 		</ul>
 		<a class="page-footer__html-academy-link" href="https://htmlacademy.ru/">
+			<img src="/img/htmlacademy-logo.svg" alt="сайт HTML academy" width="115" height="33">
 			<span class="visually-hidden">HTML Academy</span>
 		</a>
 	</footer>

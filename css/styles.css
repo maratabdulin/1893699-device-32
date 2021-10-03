@@ -1,0 +1,57 @@
+/* Класс для скрытия элементов */
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+/* Изображения для секции "категории товаров" */
+
+.category__image {
+	width: 160px;
+	height: 160px;
+	align-content: center;
+}
+
+.category__image-1 {
+	background: no-repeat 50% 50% #ffe17f url(/img/cat-VR-logo.svg);
+}
+.category__image-2 {
+	background: no-repeat 50% 100% #ffe17f url(/img/car-monopode-logo.svg);
+}
+.category__image-3 {
+	background: no-repeat 50% 50% #ffe17f url(/img/cat-actcam-logo.svg);
+}
+.category__image-4 {
+	background: no-repeat 50% 50% #ffe17f url(/img/cat-fitnessbr-logo.svg);
+}
+.category__image-5 {
+	background: no-repeat 50% 50% #ffe17f url(/img/cat-smartwatch-logo.svg);
+}
+.category__image-6 {
+	background: no-repeat 50% 50% #ffe17f url(/img/cat-quadro-logo.svg);
+}
+
+/* Изображения для списка социальных сетей футера */
+
+.socials__link {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.socials__link-1 {
+	background: url(/img/facebook-logo.svg) #ffffff 50% 50% no-repeat;
+}
+
+.socials__link-2 {
+	background: url(/img/instagram-logo.svg) #ffffff 50% 50% no-repeat;
+}
+
+.socials__link-3 {
+	background: url(/img/twitter-logo.svg) #ffffff 50% 50% no-repeat;
+}
