@@ -15,7 +15,7 @@
 			<ul class="navigation__list navigation-user">
 				<li class="navigation-user__item">
 					<form class="navigation-user__form" method="GET" action="https://echo.htmlacademy.ru/">
-						<button class="navigation-user__button" type="submit">
+						<button class="navigation-user__button-search" type="submit">
 							<span class="visually-hidden">Поиск</span>
 						</button>
 						<input class="navigation-user__input" type="text" name="search" placeholder="Поиск по сайту">
@@ -39,8 +39,8 @@
 				<li class="navigation-main__item">
 					<a class="navigation-main__link" href="#">Доставка</a>
 				</li>
-				<li class="navigation-mian__item">
-					<a class="navigation-mian__link" href="#">Гарантия</a>
+				<li class="navigation-main__item">
+					<a class="navigation-main__link" href="#">Гарантия</a>
 				</li>
 				<li class="navigation-main__item">
 					<a class="navigation-main__link" href="#">Контакты</a>
@@ -51,7 +51,7 @@
 
 	<main class="main-inner">
 		<header class="main-inner__header ">
-			<h1 class="visually-hidden">Моноподы для селфи</h1>
+			<h1 class="inner-header__title">Моноподы для селфи</h1>
 			<ul class="breadcrumbs">
 				<li class="breadcrumbs-item">
 					<a href="index.html">Главная</a>
@@ -68,6 +68,7 @@
 		<section class="catalog">
 			<h2 class="visually-hidden">Список товаров с фильтрами</h2>
 			<form class="catalog__filter" action="https://echo.htmlacademy.ru/" method="get">
+				<div class="catalog__title">Фильтр:</div>
 				<fieldset class="catalog__filter-group">
 					<legend class="catalog__filter-title">Стоимость</legend>
 					<button class="range-toggle toggle-min" type="button">
@@ -148,17 +149,17 @@
 			</form>
 
 			<form class="sorting-type">
-				<label class="visually-hidden" for="sorting">Сортировка</label>
+				<label class="sorting-label" for="sorting">Сортировка:</label>
 				<select class="select-control" id="sorting" name="sorting">
 					<option value="popular">Сначала популярное</option>
 					<option value="cheap">Сначала дешёвое</option>
 					<option value="expensive">Сначала дорогое</option>
 				</select>
 				<button class="visually-hidden" type="submit">Отсортировать продукты</button>
-				<a href="#" class="button button-light">
+				<a href="#" class="sorting__button-up">
 					<span class="visually-hidden">Сортировка от большего к меньшему</span>
 				</a>
-				<a href="#" class="button">
+				<a href="#" class="sorting__button-down">
 					<span class="visually-hidden">Сортировка от меньшего к большему</span>
 				</a>
 			</form>
@@ -204,7 +205,7 @@
 
 			<ul class="pagination">
 				<li class="pagination-item">
-					<a class="pagination-link pagination-prev">назад</a>
+					<a class="pagination-prev">назад</a>
 				</li>
 				<li class="pagination-item">
 					<a class="pagination-link">1</a>
@@ -222,7 +223,7 @@
 					<a class="pagination-link" href="#">15</a>
 				</li>
 				<li class="pagination-item">
-					<a class="pagination-link pagination-next" href="#">вперёд</a>
+					<a class="pagination-next" href="#">вперёд</a>
 				</li>
 			</ul>
 		</section>
