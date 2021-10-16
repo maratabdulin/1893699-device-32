@@ -12,7 +12,7 @@
     <img class="page-header__logo" src="/img/logo-device.svg" alt="Логотип Device" width="145" height="36">
     <nav class="page-header__navigation">
       <ul class="navigation__list navigation-user">
-        <li class="navigation-user__item">
+        <li class="navigation-user__search-item">
           <form class="navigation-user__form" method="GET" action="https://echo.htmlacademy.ru/">
             <button class="navigation-user__button-search" type="submit">
               <span class="visually-hidden">Поиск</span>
@@ -20,28 +20,31 @@
             <input class="navigation-user__input" type="text" name="search" placeholder="Поиск по сайту">
           </form>
         </li>
-        <li class="navigation-user__item">
+        <li class="navigation-user__login-item">
           <a class="navigation-user__link" href="#">Войти</a>
         </li>
-        <li class="navigation-user__item">
+        <li class="navigation-user__compare-item">
           <a class="navigation-user__link" href="#">Сравнить</a>
         </li>
-        <li class="navigation-user__item">
+        <li class="navigation-user__cart-item">
           <a class="navigation-user__link" href="#">Корзина</a>
         </li>
       </ul>
 
       <ul class="navigation__list navigation-main">
-        <li class="navigation-main__item">
+        <li class="navigation-main__catalog-item">
           <button class="navigation-main__button" type="button">Каталог товаров</button>
         </li>
         <li class="navigation-main__item">
+          <button class="navigation-main__plus-button" type="button"></button>
+        </li>
+        <li class="navigation-main__delivery-item">
           <a class="navigation-main__link" href="#">Доставка</a>
         </li>
-        <li class="navigation-main__item">
+        <li class="navigation-main__warranty-item">
           <a class="navigation-main__link" href="#">Гарантия</a>
         </li>
-        <li class="navigation-main__item">
+        <li class="navigation-main__contacts-item">
           <a class="navigation-main__link" href="#">Контакты</a>
         </li>
       </ul>
@@ -69,24 +72,26 @@
           <p class="slider__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
             замаскированным под стандартную камеру.
           </p>
-          <a href="#" class="button slider__link">подробнее</a>
-          <ol class="slider__pagination">
-            <li class="slider__pagination-item">
-              <button class="slider__pagination-button slider__pagination-button_current" type="button">
-                <span class="visually-hidden">слайд 1</span>
-              </button>
-            </li>
-            <li class="slider__pagination-item">
-              <button class="slider__pagination-button" type="button">
-                <span class="visually-hidden">слайд 2</span>
-              </button>
-            </li>
-            <li class="slider__pagination-item">
-              <button class="slider__pagination-button" type="button">
-                <span class="visually-hidden">слайд 3</span>
-              </button>
-            </li>
-          </ol>
+          <div class="paganation-wrapper">
+            <a href="#" class="button slider__link">подробнее</a>
+            <ol class="slider__pagination">
+              <li class="slider__pagination-item">
+                <button class="slider__pagination-button slider__pagination-button_current" type="button">
+                  <span class="visually-hidden">слайд 1</span>
+                </button>
+              </li>
+              <li class="slider__pagination-item">
+                <button class="slider__pagination-button" type="button">
+                  <span class="visually-hidden">слайд 2</span>
+                </button>
+              </li>
+              <li class="slider__pagination-item">
+                <button class="slider__pagination-button" type="button">
+                  <span class="visually-hidden">слайд 3</span>
+                </button>
+              </li>
+            </ol>
+          </div>
           <dl class="slider__specification">
             <dd class="specification__definition">800 м</dd>
             <dt class="specification__term">Дальность полета</dt>
@@ -95,7 +100,6 @@
           </dl>
         </div>
       </section>
-
       <section class="category">
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="category__list">
@@ -139,41 +143,38 @@
       </section>
     </div>
     <section class="service">
-      <div class="page-container">
+      <div class="page-container service-wrapper">
         <h2 class="visually-hidden">Сервисы</h2>
+        <input class="visually-hidden" type="radio" name="service__tabs" id="delivery" checked>
+        <input class="visually-hidden" type="radio" name="service__tabs" id="warranty">
+        <input class="visually-hidden" type="radio" name="service__tabs" id="credit">
         <div class="service__tabs">
-          <div class="service__tab">
-            <input type="radio" name="service__tabs" id="tab-1" checked class="tab-switch">
-            <label for="tab-1" class="tab-label tab-label-current">Доставка</label>
-            <div class="tab-block">
-              <p class="tab-description">Доставка </p>
-              <p class="tab-content">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-              <img class="tab-image" src="/img/services-delivery-logo.svg" alt="Доставка" width="136" height="164">
-            </div>
+          <label for="delivery" class="tab-label delivery_tab">Доставка</label>
+          <label for="warranty" class="tab-label warranty_tab">Гарантия</label>
+          <label for="credit" class="tab-label credit_tab">Кредит</label>
+        </div>
+        <div class="service__panels">
+          <div class="tab-block tab-block-delivery">
+            <p class="tab-description">Доставка </p>
+            <p class="tab-content">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+              Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            <img class="tab-image" src="/img/services-delivery-logo.svg" alt="Доставка" width="136" height="164">
           </div>
-          <div class="service__tab">
-            <input type="radio" name="service__tabs" id="tab-2" class="tab-switch">
-            <label for="tab-2" class="tab-label">Гарантия</label>
-            <div class="tab-block">
-              <p class="tab-description">Гарантия </p>
-              <p class="tab-content">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы
-                выдадим вам новый. Товар, не дом, конечно же.</p>
-              <img class="tab-image" src="/img/services-warranty-logo.svg" alt="Гарантия" width="171" height="195">
-            </div>
+          <div class="tab-block tab-block-warranty">
+            <p class="tab-description">Гарантия </p>
+            <p class="tab-content">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы
+              выдадим вам новый. Товар, не дом, конечно же.</p>
+            <img class="tab-image" src="/img/services-warranty-logo.svg" alt="Гарантия" width="171" height="195">
           </div>
-          <div class="service__tab">
-            <input type="radio" name="service__tabs" id="tab-3" class="tab-switch">
-            <label for="tab-3" class="tab-label">Кредит</label>
-            <div class="tab-block">
-              <p class="tab-description">Кредит</p>
-              <p class="tab-content">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас
-                наиболее
-                выгодные условия кредита. Выгодные для банка, разумеется.</p>
-              <img class="tab-image" src="/img/services-credit-logo.svg" alt="Кредит" width="156" height="188">
-            </div>
+          <div class="tab-block tab-block-credit">
+            <p class="tab-description">Кредит</p>
+            <p class="tab-content">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас
+              наиболее
+              выгодные условия кредита. Выгодные для банка, разумеется.</p>
+            <img class="tab-image" src="/img/services-credit-logo.svg" alt="Кредит" width="156" height="188">
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -209,7 +210,7 @@
               работоспособность покупки. </p>
             <h3 class="contact__subtitle">Интернет-магазин «Девайс»</h3>
             <address class="contacts__address">
-              <p class="contact__content">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+              <p class="contact__content-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
               <a class="contact__content" href="tel:+78128121212">+7 (812) 812-12-12</a>
             </address>
             <h3 class="contact__subtitle">Время работы</h3>
@@ -220,7 +221,7 @@
       </section>
     </div>
     <section class="subscribe">
-      <div class="page-container">
+      <div class="page-container subscribe__wrapper">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <p class="subscribe__slogan">Подпишитесь<br>на рассылку</p>
         <p class="subscribe__content">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками,
@@ -230,8 +231,7 @@
           <input class="subscribe__input" type="text" name="subscribe" placeholder="Ваш e-mail">
           <button class="subscribe__button" type="submit">Подписаться</button>
         </form>
-        <div class="subscribe__check"></div>
-        <p class="subscribe__content">Это бесплатно</p>
+        <p class="subscribe__text">Это бесплатно</p>
       </div>
     </section>
 
