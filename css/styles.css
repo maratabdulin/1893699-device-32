@@ -4,7 +4,7 @@
 	font-family: "Rubik";
 	font-style: normal;
 	font-weight: 400;
-	src: url("/fonts/rubik/rubik-400.woff2") format("woff2");
+	src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -12,14 +12,14 @@
 	font-family: "Rubik";
 	font-style: normal;
 	font-weight: 700;
-	src: url("/fonts/rubik/rubik-700.woff2") format("woff2");
+	src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
 	font-display: swap;
 }
 @font-face {
 	font-family: "Rubik";
 	font-style: normal;
 	font-weight: 800;
-	src: url("/fonts/rubik/rubik-800.woff2") format("woff2");
+	src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -27,7 +27,7 @@
 	font-family: "Raleway";
 	font-style: normal;
 	font-weight: 800;
-	src: url("/fonts/raleway/raleway-800.woff2") format("woff2");
+	src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -148,7 +148,7 @@ h3 {
 	padding: 2px;
 	width: 20px;
 	height: 20px;
-	background: #ffe17f url(/img/nav-search-logo.svg) 50% 50% no-repeat;
+	background: #ffe17f url(../img/nav-search-logo.svg) 50% 50% no-repeat;
 	border: none;
 	cursor: pointer;
 }
@@ -202,7 +202,7 @@ h3 {
 .navigation-main__plus-button {
 	width: 50px;
 	height: 50px;
-	background: url(/img/header-plus-button.svg) #ffe17f 50% 50% no-repeat;
+	background: url(../img/header-plus-button.svg) #ffe17f 50% 50% no-repeat;
 	border: 2px solid rgba(0, 0, 0, 0.2);
 	border-radius: 50%;
 	box-sizing: border-box;
@@ -288,7 +288,7 @@ h3 {
 	margin-right: -20px;
 	width: 20px;
 	height: 60px;
-	background: url(/img/slider-left-arrow.svg) 50% 50% no-repeat;
+	background: url(../img/slider-left-arrow.svg) 50% 50% no-repeat;
 	border: none;
 	cursor: pointer;
 }
@@ -297,7 +297,7 @@ h3 {
 	margin-left: -20px;
 	width: 20px;
 	height: 60px;
-	background: url(/img/slider-right-arrow.svg) 50% 50% no-repeat;
+	background: url(../img/slider-right-arrow.svg) 50% 50% no-repeat;
 	border: none;
 	cursor: pointer;
 }
@@ -380,22 +380,22 @@ h3 {
 }
 
 .category__image-1 {
-	background: url(/img/cat-VR-logo.svg) #ffe17f 50% 50% no-repeat;
+	background: url(../img/cat-VR-logo.svg) #ffe17f 50% 50% no-repeat;
 }
 .category__image-2 {
-	background: url(/img/car-monopode-logo.svg) #ffe17f 50% 50% no-repeat;
+	background: url(../img/car-monopode-logo.svg) #ffe17f 50% 50% no-repeat;
 }
 .category__image-3 {
-	background: url(/img/cat-actcam-logo.svg) #ffe17f 50% 50% no-repeat;
+	background: url(../img/cat-actcam-logo.svg) #ffe17f 50% 50% no-repeat;
 }
 .category__image-4 {
-	background: url(/img/cat-fitnessbr-logo.svg) #ffe17f 50% 50% no-repeat;
+	background: url(../img/cat-fitnessbr-logo.svg) #ffe17f 50% 50% no-repeat;
 }
 .category__image-5 {
-	background: url(/img/cat-smartwatch-logo.svg) #ffe17f 50% 50% no-repeat;
+	background: url(../img/cat-smartwatch-logo.svg) #ffe17f 50% 50% no-repeat;
 }
 .category__image-6 {
-	background: url(/img/cat-quadro-logo.svg) #ffe17f 50% 50% no-repeat;
+	background: url(../img/cat-quadro-logo.svg) #ffe17f 50% 50% no-repeat;
 }
 
 .category__content {
@@ -506,7 +506,7 @@ h3 {
 .delivery__image {
 	width: 125px;
 	height: 100px;
-	background: url(/img/delivery-logo.svg) #ffe17f 50% 50% no-repeat;
+	background: url(../img/delivery-logo.svg) #ffe17f 50% 50% no-repeat;
 }
 
 .delivery__content {
@@ -522,7 +522,7 @@ h3 {
 	margin: 29px 33px 31px 33px;
 	width: 40px;
 	height: 40px;
-	background: url(/img/delivery-info-logo.svg) #dcdcdc 50% 50% no-repeat;
+	background: url(../img/delivery-info-logo.svg) #dcdcdc 50% 50% no-repeat;
 	border: none;
 	border-radius: 50%;
 	cursor: pointer;
@@ -656,7 +656,7 @@ h3 {
 	content: "";
 	width: 14px;
 	height: 14px;
-	background: url(/img/subscribe-check.svg) 50% 50% no-repeat;
+	background: url(../img/subscribe-check.svg) 50% 50% no-repeat;
 } */
 
 /* свойства "footer" */
@@ -726,15 +726,15 @@ h3 {
 }
 
 .socials__link-facebook {
-	background: url(/img/facebook-logo.svg) #ffffff 50% 50% no-repeat;
+	background: url(../img/facebook-logo.svg) #ffffff 50% 50% no-repeat;
 }
 
 .socials__link-instagram {
-	background: url(/img/instagram-logo.svg) #ffffff 50% 50% no-repeat;
+	background: url(../img/instagram-logo.svg) #ffffff 50% 50% no-repeat;
 }
 
 .socials__link-twitter {
-	background: url(/img/twitter-logo.svg) #ffffff 50% 50% no-repeat;
+	background: url(../img/twitter-logo.svg) #ffffff 50% 50% no-repeat;
 }
 
 .navigation-footer__link {
@@ -753,7 +753,7 @@ h3 {
 .html-academy__image {
 	width: 115px;
 	height: 40px;
-	background: url(/img/htmlacademy-logo.svg) no-repeat 50% 50%;
+	background: url(../img/htmlacademy-logo.svg) no-repeat 50% 50%;
 }
 
 .html-academy__link {
@@ -894,14 +894,14 @@ h3 {
 	padding: 10px;
 	width: 11px;
 	height: 10px;
-	background: url(/img/sorting-up.svg) 50% 50% no-repeat;
+	background: url(../img/sorting-up.svg) 50% 50% no-repeat;
 }
 .sorting__button-down {
 	display: block;
 	padding: 10px 0 10px 10px;
 	width: 11px;
 	height: 10px;
-	background: url(/img/sorting-down.svg) 50% 50% no-repeat;
+	background: url(../img/sorting-down.svg) 50% 50% no-repeat;
 }
 
 .product-card {
