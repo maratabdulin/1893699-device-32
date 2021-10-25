@@ -68,23 +68,54 @@ h3 {
 /* типовая кнопка */
 
 .button {
+	height: 40px;
 	display: block;
+	padding-top: 9px;
+	padding-bottom: 11px;
 	font-family: "Raleway", sans-serif;
 	font-size: 18px;
 	line-height: 21px;
 	color: #000000;
 	text-transform: uppercase;
 	text-decoration: none;
-	background-color: #ffe17f;
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0) 40%,
+		#ffc700 40%,
+		#ffc700 60%,
+		rgba(255, 255, 255, 0) 60%
+	);
 	letter-spacing: 0.2em;
 	border: none;
+	box-sizing: border-box;
+}
+
+.button:focus {
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0) 40%,
+		#af4fff 40%,
+		#af4fff 60%,
+		rgba(255, 255, 255, 0) 60%
+	);
+	outline: none;
+}
+
+.button:hover {
+	background: #ffc700;
+}
+
+.button:active {
+	color: rgba(0, 0, 0, 0.3);
 }
 
 /* свойства "header" */
 
 .page-header {
+	position: relative;
+	z-index: 0;
 	margin: 40px auto 0 auto;
-	padding: 0 40px 38px 40px;
+	padding: 40px 40px 38px 40px;
 	width: 1160px;
 	height: 186px;
 	box-sizing: border-box;
@@ -98,7 +129,9 @@ h3 {
 }
 
 .page-header__logo {
-	margin: -23px 0 16px 20px;
+	position: absolute;
+	top: -23px;
+	left: 60px;
 }
 
 .page-header__navigation {
@@ -118,15 +151,19 @@ h3 {
 .navigation-user {
 	font-size: 16px;
 	line-height: 19px;
-	margin-bottom: 20px;
+	margin-bottom: 18px;
 }
 
 .navigation-user__form {
 	display: flex;
 }
 
+.navigation-user__input {
+	font-size: 16px;
+}
+
 .navigation-user__search-item {
-	margin-right: auto;
+	margin: 0 auto 0 8px;
 }
 
 .navigation-user__login-item {
@@ -240,6 +277,8 @@ h3 {
 /* свойства секции "slider" */
 
 .slider {
+	position: relative;
+	z-index: 1;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 70px;
@@ -258,23 +297,39 @@ h3 {
 .slider__button-prev,
 .slider__button-next {
 	margin: auto 0;
+	padding: 0;
 	position: absolute;
-	top: 50%;
-	width: 20px;
-	height: 60px;
+	top: 280px;
+	width: 40px;
+	height: 80px;
 	border: none;
 	cursor: pointer;
 	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	background: inherit;
+}
+
+.slider__button-prev:focus,
+.slider__button-next:focus {
+	border: 2px #af4fff solid;
+	border-radius: 6px;
+}
+
+.slider__button-prev:hover .button-prev-icon,
+.slider__button-next:hover .button-next-icon {
+	fill: rgba(0, 0, 0, 0.6);
+}
+.slider__button-prev:active .button-prev-icon,
+.slider__button-next:active .button-next-icon {
+	fill: rgba(0, 0, 0, 0.3);
 }
 
 .slider__button-prev {
-	background: url(../img/slider-left-arrow.svg) 50% 50% no-repeat;
 	left: 30px;
 }
 
 .slider__button-next {
-	background: url(../img/slider-right-arrow.svg) 50% 50% no-repeat;
-	right: 10px;
+	right: -10px;
 }
 
 .slider__number {
@@ -294,11 +349,11 @@ h3 {
 }
 
 .slider__description {
-	margin: 0 0 0 0;
+	margin: 0 0 43px 0;
 }
 
 .paganation-wrapper {
-	margin: 52px 0 70px 0;
+	margin: 0 0 60px 0;
 	padding-right: 60px;
 	display: flex;
 	justify-content: space-between;
@@ -306,8 +361,18 @@ h3 {
 
 .slider__link {
 	width: 220px;
-	display: block;
 	text-align: center;
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0) 40%,
+		#ffe17f 40%,
+		#ffe17f 60%,
+		rgba(255, 255, 255, 0) 60%
+	);
+}
+
+.slider__link:hover {
+	background: #ffe17f;
 }
 
 .slider__pagination {
@@ -411,7 +476,7 @@ h3 {
 	background: url(../img/cat-smartwatch-logo.svg) #ffe17f 50% 50% no-repeat;
 }
 .category__image-6 {
-	background: url(../img/cat-quadro-logo.svg) #ffe17f 50% 53% no-repeat;
+	background: url(../img/cat-quadro-logo.svg) #ffe17f 50% 50% no-repeat;
 }
 
 .category__content {
@@ -536,7 +601,6 @@ h3 {
 
 .delivery__content {
 	margin-top: 37px;
-	margin-left: -17px;
 	font-family: "Raleway", sans-serif;
 	font-size: 20px;
 	line-height: 24px;

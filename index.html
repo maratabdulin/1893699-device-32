@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
   <header class="page-header page-header_main-page">
-    <img class="page-header__logo" src="img/logo-device.svg" alt="Логотип Device" width="145" height="36">
+    <img class="page-header__logo" src="/img/logo-device.svg" alt="Логотип Device" width="145" height="36">
     <nav class="page-header__navigation">
       <ul class="navigation__list navigation-user">
         <li class="navigation-user__search-item">
@@ -58,10 +58,18 @@
         <h2 class="visually-hidden">Слайд квадрокоптер</h2>
         <div class="slider__img-section">
           <button class="slider__button-prev" type="button">
+            <svg class="button-prev-icon" aria-hidden="true" focusable="false" width="20" height="60"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" />
+            </svg>
             <span class="visually-hidden">Предыдущий товар</span>
           </button>
-          <img class="slider__image" src="img/slider-image-1.png" alt="Квадрокоптер" width="560" height="560">
+          <img class="slider__image" src="/img/slider-image-1.png" alt="Квадрокоптер" width="560" height="560">
           <button class="slider__button-next" type="button">
+            <svg class="button-next-icon" aria-hidden="true" focusable="false" width="20" height="60"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 60h3.5L20 30 3.5 0H0l16.2 30L0 60Z" />
+            </svg>
             <span class="visually-hidden">Следующий товар</span>
           </button>
         </div>
