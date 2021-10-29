@@ -21,10 +21,10 @@
   font-style: normal;
   font-weight: 800;
   src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
-  font-display: swap;
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
@@ -114,7 +114,7 @@ h3 {
 
 .page-header {
   position: relative;
-  z-index: 0;
+  z-index: 3;
   margin: 40px auto 0 auto;
   padding: 40px 40px 38px 40px;
   width: 1160px;
@@ -125,8 +125,8 @@ h3 {
 }
 
 .page-header_main-page {
-  height: 300px;
-  padding-bottom: 152px;
+  height: 150px;
+  /*padding-bottom: 152px;*/
 }
 
 .page-header__logo {
@@ -405,12 +405,20 @@ input.navigation-user__input:focus:placeholder-shown {
 .navigation-main__catalog-link, .navigation-main__link {
   position: relative;
   display: inline-block;
-  padding: 14px 20px 15px 20px;
   text-decoration: none;
   color: #000000;
   text-transform: uppercase;
   border: 2px solid transparent;
 }
+
+.navigation-main__catalog-link {
+  padding: 14px 15px 15px 18px;
+}
+
+.navigation-main__link {
+  padding: 14px 20px 15px 20px;
+}
+
 
 .navigation-main__catalog-link:focus, .navigation-main__link:focus {
   border: 2px solid #af4fff;
@@ -440,6 +448,77 @@ input.navigation-user__input:focus:placeholder-shown {
   border: 2px solid rgba(0, 0, 0, 0.2);
 }
 
+details[open] .navigation-main__plus-button::after {
+  content: "";
+  background: url(../img/nav-minus-hover.svg) #ffe17f 50% 50% no-repeat;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+}
+
+.navigation-main__catalog-details {
+  position: relative;
+}
+
+.navigation-main__summary-list {
+  z-index: 3;
+  padding: 26px 0 0 45px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 240px 200px auto;
+  grid-template-rows: 36px 36px;
+  background-color: #ffe17f;
+  width: 1160px;
+  height: 178px;
+  left: -303px;
+  box-sizing: border-box;
+}
+
+
+.navigation-main__summary-item {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.item-double-row {
+  grid-column: span 2;
+}
+
+.summary-link {
+  display: inline-block;
+  color: #000000;
+  text-decoration: none;
+  border: 2px solid transparent;
+  height: 27px;
+  padding: 2px 13px 0 13px;
+  box-sizing: border-box;
+}
+
+.summary-link:focus {
+  outline: none;
+  border: 2px solid #af4fff;
+  border-radius: 25px;
+}
+
+.summary-link:hover {
+  opacity: 0.6;
+}
+
+.summary-link:active {
+  opacity: 0.3;
+}
+
 .navigation-main__link:active {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -464,7 +543,6 @@ input.navigation-user__input:focus:placeholder-shown {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-
 /* свойства секции "main" */
 
 .page-main {
@@ -485,11 +563,18 @@ input.navigation-user__input:focus:placeholder-shown {
 
 .slider {
   position: relative;
-  z-index: 1;
   display: flex;
   justify-content: space-between;
   margin-bottom: 70px;
-  margin-top: -150px;
+  margin-top: 0;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background-color: #ffe17f;
 }
 
 .slider__img-section {
@@ -543,6 +628,8 @@ input.navigation-user__input:focus:placeholder-shown {
 }
 
 .slider__number {
+  position: relative;
+  z-index: 1;
   margin: 0 47px 0 0;
   text-align: end;
   font-weight: 800;
@@ -552,6 +639,8 @@ input.navigation-user__input:focus:placeholder-shown {
 }
 
 .slider__slogan {
+  position: relative;
+  z-index: 2;
   margin: -44px 0 28px 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
