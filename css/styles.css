@@ -1531,11 +1531,11 @@ details[open] .navigation-main__plus-button::after {
 /* свойства header страницы каталога */
 
 .main-inner__header {
-  padding: 37px 0 50px 60px;
+  padding: 37px 0 43px 60px;
 }
 
 .inner-header__title {
-  margin-bottom: 24px;
+  margin-bottom: 19px;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -1544,18 +1544,46 @@ details[open] .navigation-main__plus-button::after {
 
 .breadcrumbs {
   display: flex;
+  gap: 11px;
+  margin-left: -13px;
 }
 
 .breadcrumbs-item {
-  margin-right: 36px;
-  font-size: 16px;
-  line-height: 19px;
+  position: relative;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  content: "";
+  right: -8px;
+  transform: translateY(-50%);
+  top: 50%;
+  background: url("../img/cat-beardcrums-arrow.svg") 50% 50% no-repeat;
   opacity: 0.6;
 }
 
-.breadcrumbs-item a {
-  color: #000000;
+.breadcrumbs-link {
+  padding: 5px 12px 6px 12px;
+  font-size: 16px;
+  line-height: 19px;
   text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(0, 0, 0, 0.6);
+  color: #000000;
+}
+
+.breadcrumbs-link:focus {
+  outline: 5px #af4fff solid;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* свойства секции catalog */
@@ -1648,7 +1676,7 @@ details[open] .navigation-main__plus-button::after {
 }
 
 .sorting-label {
-  width: 200px;
+  width: 186px;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 19px;
@@ -1658,27 +1686,65 @@ details[open] .navigation-main__plus-button::after {
 }
 
 .select-control {
+  position: relative;
+  z-index: 0;
+  padding: 4px 41px 7px 13px;
   margin-right: auto;
   font-size: 16px;
   line-height: 19px;
-  background-color: #e5e5e5;
   border: none;
+  appearance: none;
+  background: url("../img/cat-select-arrow.svg") #e5e5e5 right 15px center no-repeat;
+  outline: none;
+  letter-spacing: 0.3px;
 }
 
-.sorting__button-up {
-  display: block;
-  padding: 10px;
-  width: 11px;
-  height: 10px;
-  background: url(../img/sorting-up.svg) 50% 50% no-repeat;
+.select-control:hover {
+  color: rgba(0, 0, 0, 0.6);
+  background-image: url("../img/cat-select-arrow-hover.svg");
+}
+
+.select-control:focus {
+  color: #000000;
+  outline: 5px solid #af4fff;
+
+}
+
+.select-control:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-image: url("../img/cat-select-arrow-active.svg");
+}
+
+.sorting__button-up,
+.sorting__button-down {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 .sorting__button-down {
+  margin-right: -9px;
+}
+
+.sorting__button-up:hover,
+.sorting__button-down:hover {
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.sorting__button-up:focus,
+.sorting__button-down:focus {
+  outline: 5px #af4fff solid;
+}
+
+.sorting__button-up:active,
+.sorting__button-down:active {
+  fill: #000000;
+}
+
+.sorting-icon {
   display: block;
-  padding: 10px 0 10px 10px;
-  width: 11px;
-  height: 10px;
-  background: url(../img/sorting-down.svg) 50% 50% no-repeat;
+  margin: auto;
 }
 
 .product-card {
@@ -1735,6 +1801,30 @@ details[open] .navigation-main__plus-button::after {
   letter-spacing: 2px;
   border: solid 3px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.product-card__show-more:hover {
+  border-color: #000000;
+}
+
+.product-card__show-more:focus {
+  outline: 3px solid #af4fff;
+  border-color: #af4fff;
+}
+
+.product-card__show-more:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog__button {
+  width: 200px;
 }
 
 .pagination {

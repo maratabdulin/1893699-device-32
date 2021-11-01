@@ -96,13 +96,13 @@
             <h1 class="inner-header__title">Моноподы для селфи</h1>
             <ul class="breadcrumbs">
                 <li class="breadcrumbs-item">
-                    <a href="index.html">Главная</a>
+                    <a class="breadcrumbs-link" href="index.html">Главная</a>
                 </li>
                 <li class="breadcrumbs-item">
-                    <a href="#">Каталог товаров</a>
+                    <a class="breadcrumbs-link" href="#">Каталог товаров</a>
                 </li>
                 <li class="breadcrumbs-item">
-                    <a href="#">Моноподы для селфи</a>
+                    <a class="breadcrumbs-link" href="#">Моноподы для селфи</a>
                 </li>
             </ul>
         </header>
@@ -201,15 +201,24 @@
             <form class="sorting-type">
                 <label class="sorting-label" for="sorting">Сортировка:</label>
                 <select class="select-control" id="sorting" name="sorting">
-                    <option value="popular">Сначала популярное</option>
+                    <option value="popular">Сначала популярные</option>
                     <option value="cheap">Сначала дешёвое</option>
                     <option value="expensive">Сначала дорогое</option>
                 </select>
-                <button class="visually-hidden" type="submit">Отсортировать продукты</button>
+                <button class="visually-hidden" tabindex="-1" type="submit">Отсортировать продукты</button>
                 <a href="#" class="sorting__button-up">
+                    <svg class="sorting-icon" aria-hidden="true" focusable="false" width="11" height="10"
+                         viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 0L11 10H0"/>
+                    </svg>
                     <span class="visually-hidden">Сортировка от большего к меньшему</span>
                 </a>
                 <a href="#" class="sorting__button-down">
+                    <svg class="sorting-icon" aria-hidden="true" focusable="false" width="11" height="10"
+                         viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 10L0 0H11"/>
+                    </svg>
+                    
                     <span class="visually-hidden">Сортировка от меньшего к большему</span>
                 </a>
             </form>
@@ -265,7 +274,7 @@
                     <a href="#" class="product-card__button button visually-hidden">Подробнее</a>
                 </li>
             </ul>
-            <button class="button product-card__show-more" type="button">Загрузить еще</button>
+            <button class="product-card__show-more" type="button">Загрузить ещё</button>
             
             <ul class="pagination">
                 <li class="pagination-item-first">
