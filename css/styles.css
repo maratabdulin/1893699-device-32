@@ -149,6 +149,7 @@ h3 {
 /* Меню навигация пользователя */
 
 .navigation-user {
+  position: relative;
   font-size: 16px;
   line-height: 19px;
   margin-bottom: 18px;
@@ -308,6 +309,16 @@ input.navigation-user__input:focus:placeholder-shown {
 
 .navigation-user__cart-link {
   padding: 9px 18px 0 20px;
+}
+
+.navigation-user__exit {
+  position: relative;
+  left: -16px;
+}
+
+.navigation-user__exit-link {
+  padding: 9px 10px 0 10px;
+  opacity: 0.3;
 }
 
 .login-icon {
@@ -1696,7 +1707,7 @@ details[open] .navigation-main__plus-button::after {
   appearance: none;
   background: url("../img/cat-select-arrow.svg") #e5e5e5 right 15px center no-repeat;
   outline: none;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.01em;
 }
 
 .select-control:hover {
@@ -1707,7 +1718,6 @@ details[open] .navigation-main__plus-button::after {
 .select-control:focus {
   color: #000000;
   outline: 5px solid #af4fff;
-
 }
 
 .select-control:active {
@@ -1749,6 +1759,7 @@ details[open] .navigation-main__plus-button::after {
 
 .product-card {
   min-height: 460px;
+  position: relative;
 }
 
 .product-cards__wrapper {
@@ -1767,15 +1778,76 @@ details[open] .navigation-main__plus-button::after {
 }
 
 .product-card__link {
+  z-index: 2;
   text-decoration: none;
+  outline: none;
 }
 
-.product-card-title {
+.product-card__link:hover + .product-card__button {
+  display: block;
+}
+
+.product-card__link:hover .product-card__image {
+  z-index: 1;
+  opacity: 0.3;
+  background-color: #f0f0f0;
+}
+
+.product-card__link:hover::after {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 380px;
+  opacity: 0.6;
+  background: #f0f0f0;
+}
+
+.product-card__link:focus .product-card__image {
+  outline: 5px solid #af4fff;
+  outline-offset: -5px;
+}
+
+.product-card__link:focus .product-card__wrapper .product-card__title,
+.product-card__link:focus .product-card__wrapper .product-card__price {
+  color: #af4fff;
+}
+
+.product-card__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: #000000;
   letter-spacing: -0.02em;
+}
+
+.product-card__button {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 180px;
+  top: 192px;
+  left: 50%;
+  height: 40px;
+  transform: translate(-50%, -50%);
+}
+
+.product-card__button:hover {
+  display: block;
+  background: #ffc700;
+}
+
+.product-card_new {
+  z-index: 3;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 27px;
+  right: 27px;
+  background: url("../img/prod-card-new.svg") no-repeat;
 }
 
 .product-card__image {
@@ -1829,12 +1901,24 @@ details[open] .navigation-main__plus-button::after {
 
 .pagination {
   display: flex;
-  padding: 20px 28px;
+  gap: 8px;
   background-color: #ebebeb;
+}
+
+.pagination-item {
+  display: flex;
+  align-items: center;
 }
 
 .pagination-prev,
 .pagination-next {
+  display: flex;
+  justify-self: flex-start;
+  align-items: center;
+  padding-right: 29px;
+  padding-left: 29px;
+  height: 70px;
+  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 19px;
@@ -1844,24 +1928,53 @@ details[open] .navigation-main__plus-button::after {
   text-decoration: none;
 }
 
+.pagination-next {
+  justify-self: flex-end;
+}
+
 .pagination-item-first {
   margin-right: auto;
 }
 
-.pagination-item {
-  margin: 0 14px 0 14px;
+.pagination-item-last {
+  margin-left: 114px;
 }
 
-.pagination-item-last {
-  margin-left: 150px;
+.pagination-prev:hover,
+.pagination-next:hover {
+  background-color: #dcdcdc;
+}
+
+.pagination-prev:focus,
+.pagination-next:focus {
+  outline: 5px solid #af4fff;
+  outline-offset: -5px;
+}
+
+.pagination-prev:focus,
+.pagination-next:focus {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .pagination-link {
+  display: flex;
+  padding: 3px 10px 6px 10px;
   font-size: 16px;
   line-height: 19px;
-  color: #444444;
-  opacity: 0.3;
+  color: rgba(68, 68, 68, 0.3);
   text-decoration: none;
+}
+
+.pagination-link:hover {
+  color: #444444;
+}
+
+.pagination-link:focus {
+  outline: 5px solid #af4fff;
+}
+
+.pagination-link:active {
+  color: rgba(68, 68, 68, 0.1);
 }
 
 /* Класс для скрытия элементов */
