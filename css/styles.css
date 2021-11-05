@@ -1,5 +1,4 @@
 /* Подключение шрифтов */
-
 @font-face {
   font-family: "Rubik";
   font-style: normal;
@@ -32,7 +31,6 @@
 }
 
 /* общие свойства страницы */
-
 html {
   height: 100%;
 }
@@ -66,7 +64,6 @@ h3 {
 }
 
 /* типовая кнопка */
-
 .button {
   height: 40px;
   display: block;
@@ -110,12 +107,11 @@ h3 {
 }
 
 /* свойства "header" */
-
 .page-header {
   position: relative;
   z-index: 3;
   margin: 40px auto 0 auto;
-  padding: 40px 40px 38px 40px;
+  padding: 38px 40px 38px 40px;
   width: 1160px;
   height: 186px;
   box-sizing: border-box;
@@ -147,12 +143,11 @@ h3 {
 }
 
 /* Меню навигация пользователя */
-
 .navigation-user {
   position: relative;
   font-size: 16px;
   line-height: 19px;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
   box-sizing: border-box;
   justify-content: space-between;
 }
@@ -258,7 +253,7 @@ input.navigation-user__input:focus:placeholder-shown {
 }
 
 .navigation-user__compare-item {
-  margin-right: 16px;
+  margin-right: 14px;
 }
 
 .navigation-user__cart-item {
@@ -271,8 +266,8 @@ input.navigation-user__input:focus:placeholder-shown {
   align-content: center;
   position: absolute;
   content: "2";
-  top: 18px;
-  left: 6px;
+  top: 20px;
+  left: 7px;
   font-size: 14px;
   transform: translateY(-50%);
   background-color: #ffffff;
@@ -362,7 +357,6 @@ input.navigation-user__input:focus:placeholder-shown {
 }
 
 /* Меню навигация страницы */
-
 .navigation-main {
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.2em;
@@ -376,15 +370,15 @@ input.navigation-user__input:focus:placeholder-shown {
 
 .navigation-main__delivery-item {
   margin-left: auto;
-  width: 160px;
+  width: 159px;
 }
 
 .navigation-main__warranty-item {
-  width: 214px;
+  width: 215px;
 }
 
 .navigation-main__contacts-item {
-  width: 168px;
+  width: 166px;
   text-align: right;
 }
 
@@ -554,7 +548,6 @@ details[open] .navigation-main__plus-button::after {
 }
 
 /* свойства секции "main" */
-
 .page-main {
   display: flex;
   flex-direction: column;
@@ -570,7 +563,6 @@ details[open] .navigation-main__plus-button::after {
 }
 
 /* свойства секции "slider" */
-
 .slider {
   position: relative;
   display: flex;
@@ -592,16 +584,21 @@ details[open] .navigation-main__plus-button::after {
   display: flex;
 }
 
+.slider__controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .slider__info-section {
   padding: 30px 0 39px 40px;
 }
 
 .slider__button-prev,
 .slider__button-next {
-  margin: auto 0;
   padding: 0;
   position: absolute;
-  top: 280px;
   width: 40px;
   height: 80px;
   border: none;
@@ -651,14 +648,14 @@ details[open] .navigation-main__plus-button::after {
 .slider__slogan {
   position: relative;
   z-index: 2;
-  margin: -44px 0 28px 0;
+  margin: -44px 0 30px 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
 }
 
 .slider__description {
-  margin: 0 0 43px 0;
+  margin: 0 0 41px 0;
 }
 
 .paganation-wrapper {
@@ -686,10 +683,12 @@ details[open] .navigation-main__plus-button::after {
 
 .slider__pagination {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 15px;
   display: flex;
   align-items: center;
-  width: 80px;
+  gap: 23px;
+  flex-wrap: wrap;
+  /*width: 80px;*/
   justify-content: space-between;
 }
 
@@ -759,9 +758,8 @@ details[open] .navigation-main__plus-button::after {
 }
 
 /* свойства секции "category" */
-
 .category {
-  margin: 0 0 80px 0;
+  margin: 0 0 81px 0;
 }
 
 .category__list {
@@ -866,7 +864,6 @@ details[open] .navigation-main__plus-button::after {
 }
 
 /* свойства секции "services" */
-
 .service {
   margin: 100px 0 90px 0;
   height: 288px;
@@ -1002,9 +999,8 @@ details[open] .navigation-main__plus-button::after {
 }
 
 /* свойства секции "about" */
-
 .about {
-  padding-bottom: 80px;
+  padding-bottom: 77px;
 }
 
 .about__delivery {
@@ -1187,7 +1183,6 @@ details[open] .navigation-main__plus-button::after {
 }
 
 /* свойства секции "subscribe" */
-
 .subscribe {
   margin: 0;
   background-color: #f0f0f0;
@@ -1197,7 +1192,6 @@ details[open] .navigation-main__plus-button::after {
   padding: 75px 0 130px 0;
   display: grid;
   grid-template-columns: 560px 40px 360px 200px;
-
   grid-template-areas:
     "subscribe__slogan . subscribe__content subscribe__content"
     "subscribe__form subscribe__form subscribe__form subscribe__text";
@@ -1310,7 +1304,6 @@ details[open] .navigation-main__plus-button::after {
 }
 
 /* свойства "footer" */
-
 .page-footer {
   margin: 0;
   padding: 62px 0 62px;
@@ -1319,6 +1312,7 @@ details[open] .navigation-main__plus-button::after {
 }
 
 .page-footer__logo {
+  margin-left: -2px;
   margin-bottom: 17px;
 }
 
@@ -1333,7 +1327,6 @@ details[open] .navigation-main__plus-button::after {
   чтобы выровнять блок по краю текста
   и border focus мог выходить за пределы
   основной ширины page-container: 1160px  */
-
 .page-footer__address {
   line-height: 19px;
   margin-top: 6px;
@@ -1344,7 +1337,6 @@ details[open] .navigation-main__plus-button::after {
   чтобы выровнять блок по краю текста
   и border focus мог выходить за пределы
   основной ширины page-container: 1160px  */
-
 .page-footer__contact {
   margin-right: -15px;
 }
@@ -1504,7 +1496,6 @@ details[open] .navigation-main__plus-button::after {
 чтобы выровнять блок по краю текста
 и border focus мог выходить за пределы
 основной ширины page-container: 1160px  */
-
 .html-academy__link {
   display: block;
   height: 53px;
@@ -1540,7 +1531,6 @@ details[open] .navigation-main__plus-button::after {
 }
 
 /* свойства header страницы каталога */
-
 .main-inner__header {
   padding: 37px 0 43px 60px;
 }
@@ -1616,13 +1606,13 @@ details[open] .navigation-main__plus-button::after {
 .catalog__title {
   width: 328px;
   height: 20px;
-  padding: 25px 0 25px 60px;
-  letter-spacing: 2px;
+  padding: 25px 0 25px 59px;
   box-sizing: border-box;
   background-color: #dcdcdc;
   font-family: "Raleway", sans-serif;
   line-height: 19px;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .catalog-filter-wrapper {
@@ -1634,38 +1624,276 @@ details[open] .navigation-main__plus-button::after {
 }
 
 .catalog__filter {
-  padding: 70px 69px 0 59px;
+  padding: 75px 69px 0 59px;
   width: 328px;
   background-color: #e5e5e5;
   box-sizing: border-box;
 }
 
 .catalog__filter-list {
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+  margin-top: 19px;
 }
 
 .catalog__filter-group {
-  margin: 0 0 45px 0;
+  position: relative;
+  margin: 0 0 30px 0;
   padding: 0;
   background-color: #e5e5e5;
   border: none;
 }
 
-.catalog__filter-title {
-  display: block;
-  font-weight: 700;
+.catalog__filter-group:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: -38px;
+  height: 2px;
+  background-color: #000000;
+
 }
 
-.catalog__filter-label {
+/* Оформление фильтра Range*/
+
+.filter__range-scale {
+  position: relative;
+  margin: 33px 0 42px 0;
+  height: 2px;
+  background-color: #dcdcdc;
+  border-radius: 2px;
+}
+
+.filter__range-bar {
+  position: absolute;
+  background-color: #000000;
+  height: 2px;
+}
+
+.range-toggle {
+  padding: 0;
+  margin: 0 auto 6px auto;
+  width: 18px;
+  height: 18px;
+  border: #000000 2px solid;
+  border-radius: 50%;
+  background: #ebebeb;
+  cursor: pointer;
+  outline: none;
+}
+
+.range-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top: -8px;
+}
+
+.range-wrapper-min {
+  transform: translateX(-50%);
+  left: 0;
+}
+
+.range-wrapper-max {
+  transform: translateX(50%);
+  right: 0;
+}
+
+.range-wrapper:hover .range-toggle {
+  border: rgba(0, 0, 0, 0.5) 2px solid;
+}
+
+.range-wrapper:focus-within .range-toggle {
+  border: #af4fff 2px solid;
+}
+
+.range-wrapper:focus-within .catalog__range-label {
+  color: #af4fff;
+}
+
+.range-wrapper:focus-within .catalog__range-label .catalog__range-input {
+  color: #af4fff;
+}
+
+.range-wrapper:active .range-toggle {
+  background-color: #000000;
+  border: #000000 2px solid;
+}
+
+.range-wrapper:active .catalog__range-label {
+  color: #000000;
+}
+
+.range-wrapper:active .catalog__range-label .catalog__range-input {
+  color: #000000;
+}
+
+.catalog__range-label {
+  color: rgba(0, 0, 0, 0.3);
+  display: flex;
   font-size: 15px;
-  line-height: 17px;
-  opacity: 0.3;
+  line-height: 18px;
+}
+
+.range-label_min {
+  padding-left: 30px;
+}
+
+.catalog__range-input {
+  color: rgba(0, 0, 0, 0.3);
+  max-width: 37px;
+  padding: 0 2px;
+  font: inherit;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: auto;
+}
+
+.catalog__range-input::-webkit-outer-spin-button,
+.catalog__range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.catalog__filter-title {
+  padding: 3px 0 0 0;
+  display: block;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Оформление формы с чекбоксами и радиокнопками */
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 38px;
+}
+
+.control__mark {
+  position: absolute;
+  left: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #ebebeb;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.control__input[type="radio"] + .control__mark {
+  border-radius: 50%;
 }
 
 .control__label {
   width: 200px;
   font-size: 16px;
   line-height: 19px;
+}
+
+.control__input:checked + .control__mark {
+  border-color: #000000;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/filter-check.svg");
+}
+
+.control__input[type="radio"]:checked + .control__mark:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.control:hover .control__mark {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.control:hover .control__label {
+  color: #000000;
+}
+
+.control:hover .control__input:checked ~ .control__label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.control:hover .control__input:checked ~ .control__mark {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.control:hover .control__input[type="checkbox"]:checked ~ .control__mark:before {
+  background-image: url("../img/filter-check-hover.svg");
+}
+
+.control:hover .control__input[type="radio"]:checked ~ .control__mark:before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.control:focus-within .control__input ~ .control__mark {
+  border-color: #af4fff;
+}
+
+.control:focus-within .control__input ~ .control__label,
+.control:focus-within .control__input:checked ~ .control__label {
+  color: #af4fff;
+}
+
+.control:focus-within .control__input ~ .control__mark,
+.control:focus-within .control__input:checked ~ .control__mark {
+  border-color: #af4fff;
+}
+
+.control:focus-within .control__input[type="checkbox"]:checked + .control__mark:before {
+  background-image: url("../img/filter-check-focus.svg");
+}
+
+.control:focus-within .control__input[type="radio"]:checked + .control__mark:before {
+  background-color: #af4fff;
+}
+
+.control .control__input:disabled ~ .control__mark,
+.control .control__input:checked:disabled ~ .control__mark {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.control .control__input:disabled ~ .control__label,
+.control .control__input:checked:disabled ~ .control__label {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.control .control__input[type="checkbox"]:checked:disabled + .control__mark:before {
+  background-image: url("../img/filter-check-disabled.svg");
+}
+
+.control .control__input[type="radio"]:checked:disabled + .control__mark:before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.catalog__filter-label {
+  font-size: 15px;
+  line-height: 17px;
+  opacity: 0.3;
 }
 
 .sorting-type {
@@ -1756,6 +1984,8 @@ details[open] .navigation-main__plus-button::after {
   display: block;
   margin: auto;
 }
+
+/*Оформление карточки продукта*/
 
 .product-card {
   min-height: 460px;
@@ -1897,7 +2127,11 @@ details[open] .navigation-main__plus-button::after {
 
 .catalog__button {
   width: 200px;
+  position: relative;
+  top: -7px
 }
+
+/* Оформление элементов паганации*/
 
 .pagination {
   display: flex;
@@ -1978,7 +2212,6 @@ details[open] .navigation-main__plus-button::after {
 }
 
 /* Класс для скрытия элементов */
-
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
