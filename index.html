@@ -53,7 +53,50 @@
             <path
                     d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z"/>
           </svg>
-          Корзина</a>
+          Корзина
+        </a>
+        
+        <!-- Поповер корзины отключен -->
+        <div class="popover-cart">
+          <button class="popover-close">
+            2
+            <span class="visually-hidden">Закрыть корзину</span>
+          </button>
+          <div class="popover-content">
+            <h2 class="popover-title visually-hidden">Корзина</h2>
+            <div class="popover-cart-item">
+              <a class="popover-link" href="#">
+                <img class="popover-image" src="img/popover-product-1.png" alt="Любительская селфи-палка" width="41"
+                     height="43">Любительская селфи-палка
+              </a>
+              <button class="popover-delete-item">
+                <svg class="popover-delete-icon" aria-hidden="true" focusable="false" width="11" height="11"
+                     viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L10 0L5.5 4.5L1 0L0 1L4.5 5.5L0 10L1 11L5.5 6.5L10 11L11 10L6.5 5.5L11 1Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="popover-cart-item">
+              <a class="popover-link" href="#">
+                <img class="popover-image" src="img/popover-product-2.png" alt="Любительская селфи-палка" width="41"
+                     height="43">Профессиональная селфи-палка
+              </a>
+              <button class="popover-delete-item">
+                <svg class="popover-delete-icon" aria-hidden="true" focusable="false" width="11" height="11"
+                     viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L10 0L5.5 4.5L1 0L0 1L4.5 5.5L0 10L1 11L5.5 6.5L10 11L11 10L6.5 5.5L11 1Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="popover-cart-total">
+              <p>Товаров: 2</p>
+              <p>Сумма: 2000 ₽</p>
+            </div>
+            <button class="open-cart-button">Открыть корзину</button>
+          </div>
+        </div>
       </li>
     </ul>
     <ul class="navigation__list navigation-main">
@@ -280,7 +323,8 @@
                                     вот всё.</p>
       <form class="subscribe__form" method="GET" action="https://echo.htmlacademy.ru/">
         <label for="subscribe" class="visually-hidden">e-mail для подписки</label>
-        <input class="subscribe__input" type="text" id="subscribe" name="subscribe" placeholder="Ваш e-mail">
+        <input class="subscribe__input" type="email" id="subscribe" name="subscribe" placeholder="Ваш e-mail"
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
         <button class="subscribe__button" type="submit">Подписаться</button>
       </form>
       <p class="subscribe__text">Это бесплатно</p>
@@ -351,5 +395,66 @@
     </div>
   </div>
 </footer>
+<div class="modal-container">
+  <div class="modal">
+    <button class="modal-close-button">
+      <svg class="modal-close-icon" aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M26 3L23 0L13 10L3 0L0 3L10 13L0 23L3 26L13 16L23 26L26 23L16 13L26 3Z"/>
+      </svg>
+    </button>
+    <section class="modal-content">
+      <h2 class="modal-title">Доставка под заказ</h2>
+      <form class="modal-delivery-form" action="https://echo.htmlacademy.ru/">
+        <div class="field-group field-group-user-name">
+          <label for="user-name" class="form-label">Ваше имя:</label>
+          <input class="input-field input-user-name" type="text" id="user-name" name="user-name"
+                 placeholder="Имя Фамилия" required>
+          <p class="input-warning">Пожалуйста, представьтесь</p>
+        </div>
+        <div class="field-group field-group-user-email">
+          <label for="user-email" class="form-label">Ваш e-mail:</label>
+          <input class="input-field input-user-email" type="email" id="user-email" name="user-email"
+                 placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+          <p class="input-warning">Забавный у вас адрес</p>
+        </div>
+        <div class="field-group field-group-orders-items">
+          <label for="orders-items" class="form-label">Что нужно привезти:</label>
+          <input class="input-field" type="text" id="orders-items" name="orders-items" placeholder="В свободной форме">
+        </div>
+        <div class="field-group field-group-number-of-item">
+          <label for="number-of-item" class="form-label">Количество:</label>
+          <input class="input-field input-number-of-item" type="number" id="number-of-item" name="number-of-item"
+                 placeholder="1" required>
+          
+          <button class="button-number-minus" type="button">
+            <svg class="modal-plus-minus" aria-hidden="true" focusable="false" width="16" height="2" viewBox="0 0 16 2"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 0H0V2H16V0Z"/>
+            </svg>
+            <span class="visually-hidden">Уменьшить количество товара</span>
+          </button>
+          <button class="button-number-plus" type="button">
+            <svg class="modal-plus-minus" aria-hidden="true" focusable="false" width="16" height="16"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z"/>
+            </svg>
+            <span class="visually-hidden">Увеличить количество товара</span>
+          </button>
+          <button class="tooltip-info" type="button">
+            <span class="visually-hidden">Информация о количестве</span>
+          </button>
+          <div class="tooltip-content">
+            <p>
+              Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+              к провозу багажа.
+            </p>
+          </div>
+        </div>
+        <button class="button modal-button" type="submit">Отправить</button>
+      </form>
+    </section>
+  </div>
+</div>
 </body>
 </html>
