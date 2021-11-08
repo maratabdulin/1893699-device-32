@@ -51,6 +51,7 @@ body {
 }
 
 img {
+  max-width: 100%;
   object-fit: contain;
 }
 
@@ -128,10 +129,11 @@ h3 {
   min-height: 183px;
 }
 
-.page-header__logo {
+.header__logo {
   position: absolute;
   top: -23px;
   left: 60px;
+  display: block;
 }
 
 .page-header__navigation {
@@ -140,8 +142,9 @@ h3 {
 
 .navigation__list {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: end;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -551,10 +554,14 @@ input.navigation-user__input:focus:placeholder-shown {
 
 .slider {
   position: relative;
-  display: flex;
+  display: none;
   justify-content: space-between;
   margin-top: 0;
   margin-bottom: 70px;
+}
+
+.slider-current {
+  display: flex;
 }
 
 .slider:before {
@@ -568,6 +575,7 @@ input.navigation-user__input:focus:placeholder-shown {
 .slider__img-section {
   position: relative;
   display: flex;
+  min-width: 560px;
 }
 
 .slider__controls {
@@ -578,8 +586,8 @@ input.navigation-user__input:focus:placeholder-shown {
 }
 
 .slider__info-section {
-  padding: 30px 0 39px 40px;
   max-width: 560px;
+  padding: 30px 0 39px 40px;
 }
 
 .slider-image {
@@ -628,7 +636,7 @@ input.navigation-user__input:focus:placeholder-shown {
 .slider__number {
   position: relative;
   z-index: 1;
-  margin: 0 47px 0 0;
+  margin: 0 50px 0 0;
   font-size: 180px;
   font-weight: 800;
   line-height: 135px;
@@ -639,8 +647,8 @@ input.navigation-user__input:focus:placeholder-shown {
 .slider__slogan {
   position: relative;
   z-index: 2;
-  margin: -44px 0 30px 0;
   max-width: 560px;
+  margin: -44px 0 30px 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -652,10 +660,10 @@ input.navigation-user__input:focus:placeholder-shown {
 
 .paganation-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 0 59px 0;
   padding-right: 60px;
-  flex-wrap: wrap;
 }
 
 .slider__link {
@@ -725,18 +733,16 @@ input.navigation-user__input:focus:placeholder-shown {
 }
 
 .slider__specification {
-
   display: grid;
-  white-space: normal;
-  grid-template-columns: minmax(140px, max-content) minmax(140px, max-content);
-
+  grid-template-columns: minmax(160px, max-content) minmax(140px, max-content);
   margin: 0;
   padding: 0;
+  white-space: normal;
   row-gap: 10px;
-  column-gap: 20px;
 }
 
 .specification__definition {
+  grid-row: 1;
   margin: 0;
   padding: 0;
   font-size: 36px;
@@ -744,6 +750,7 @@ input.navigation-user__input:focus:placeholder-shown {
 }
 
 .specification__term {
+  grid-row: 2;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -757,10 +764,10 @@ input.navigation-user__input:focus:placeholder-shown {
 
 .category__list {
   display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
   justify-content: start;
   padding: 0;
-  flex-wrap: wrap;
-  gap: 40px;
 }
 
 .category__item {
@@ -964,7 +971,7 @@ input.navigation-user__input:focus:placeholder-shown {
   background: #000000;
 }
 
-/* часть черного таба */
+/* часть черного tab */
 #delivery:checked ~ .service__tabs .delivery_tab::after,
 #warranty:checked ~ .service__tabs .warranty_tab::after,
 #credit:checked ~ .service__tabs .credit_tab::after {
@@ -1043,8 +1050,8 @@ input.navigation-user__input:focus:placeholder-shown {
 }
 
 .delivery__content {
-  max-width: 850px;
   align-self: center;
+  max-width: 850px;
   padding-right: 15px;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
@@ -1456,11 +1463,11 @@ input.navigation-user__input:focus:placeholder-shown {
 }
 
 .page-footer__contact {
-  margin-right: -15px;
   display: block;
   justify-self: end;
   box-sizing: border-box;
   min-height: 27px;
+  margin-right: -15px;
   padding: 1px 13px 0 13px;
   border: 2px solid transparent;
   border-radius: 25px;
@@ -1534,8 +1541,8 @@ input.navigation-user__input:focus:placeholder-shown {
 
 .breadcrumbs {
   display: flex;
-  flex-wrap: wrap;
   gap: 11px;
+  flex-wrap: wrap;
   margin-left: -13px;
 }
 
@@ -1758,7 +1765,7 @@ input.navigation-user__input:focus:placeholder-shown {
   letter-spacing: -0.02em;
 }
 
-/* Оформление формы с чекбоксами и радиокнопками */
+/* Оформление формы с checkbox и radiobutton */
 
 .control {
   position: relative;
@@ -2124,12 +2131,12 @@ input.navigation-user__input:focus:placeholder-shown {
   min-width: 200px;
 }
 
-/* Оформление элементов паганации*/
+/* Оформление элементов paganation */
 
 .pagination {
   display: flex;
-  flex-wrap: wrap;
   gap: 8px;
+  flex-wrap: wrap;
   background-color: #ebebeb;
 }
 
@@ -2214,7 +2221,7 @@ input.navigation-user__input:focus:placeholder-shown {
   margin: -1px;
 }
 
-/* Офрмление поповера */
+/* Оформление popover */
 
 .popover-open {
   display: block;

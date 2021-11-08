@@ -4,11 +4,13 @@
   <meta charset="utf-8">
   <title>HTML Academy: Device</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
 </head>
 <body>
 <header class="page-header page-header_main-page">
-  <img class="page-header__logo" src="img/logo-device.svg" alt="Логотип Device" width="145" height="36">
+  <a class="header__logo" href="index.html">
+    <img class="page-header__logo" src="img/logo-device.svg" alt="Логотип Device" width="145" height="36">
+  </a>
   <nav class="page-header__navigation">
     <ul class="navigation__list navigation-user">
       <li class="navigation-user__search-item">
@@ -134,7 +136,7 @@
 <main class="page-main main-container">
   <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
   <div class="page-container">
-    <section class="slider">
+    <section class="slider slider-current">
       <h2 class="visually-hidden">Слайд квадрокоптер</h2>
       <div class="slider__img-section">
         <div class="slider__controls">
@@ -153,7 +155,7 @@
             <span class="visually-hidden">Следующий товар</span>
           </button>
         </div>
-        <img class="slider__image" src="img/slider-image-1.png" alt="Квадрокоптер" width="560" height="560">
+        <img src="img/slider-image-1.png" alt="Квадрокоптер" width="560" height="560">
       </div>
       <div class="slider__info-section">
         <p class="slider__number">01</p>
@@ -187,6 +189,118 @@
           <dd class="specification__definition">50 м</dd>
           <dt class="specification__term">Дальность полета</dt>
           <dt class="specification__term">Радиус поражения</dt>
+        </dl>
+      </div>
+    </section>
+    <section class="slider">
+      <h2 class="visually-hidden">Слайд фитнес-браслет</h2>
+      <div class="slider__img-section">
+        <div class="slider__controls">
+          <button class="slider__button-prev" type="button">
+            <svg class="button-prev-icon" aria-hidden="true" focusable="false" width="20" height="60"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z"/>
+            </svg>
+            <span class="visually-hidden">Предыдущий товар</span>
+          </button>
+          <button class="slider__button-next" type="button">
+            <svg class="button-next-icon" aria-hidden="true" focusable="false" width="20" height="60"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 60h3.5L20 30 3.5 0H0l16.2 30L0 60Z"/>
+            </svg>
+            <span class="visually-hidden">Следующий товар</span>
+          </button>
+        </div>
+        <img src="img/slider-image-2.png" alt="Фитнес-браслет" width="560" height="560">
+      </div>
+      <div class="slider__info-section">
+        <p class="slider__number">02</p>
+        <p class="slider__slogan">Худеем<br>
+                                  правильно!</p>
+        <p class="slider__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
+                                       соблюдать диету.
+        </p>
+        <div class="paganation-wrapper">
+          <a href="#" class="button slider__link">подробнее</a>
+          <ol class="slider__pagination">
+            <li class="slider__pagination-item">
+              <button class="slider__pagination-button slider__pagination-button_current" type="button">
+                <span class="visually-hidden">слайд 1</span>
+              </button>
+            </li>
+            <li class="slider__pagination-item">
+              <button class="slider__pagination-button" type="button">
+                <span class="visually-hidden">слайд 2</span>
+              </button>
+            </li>
+            <li class="slider__pagination-item">
+              <button class="slider__pagination-button" type="button">
+                <span class="visually-hidden">слайд 3</span>
+              </button>
+            </li>
+          </ol>
+        </div>
+        <dl class="slider__specification">
+          <dd class="specification__definition">48 часов</dd>
+          <dt class="specification__term">Без подзарядки</dt>
+        </dl>
+      </div>
+    </section>
+    <section class="slider">
+      <h2 class="visually-hidden">Слайд палка для селфи</h2>
+      <div class="slider__img-section">
+        <div class="slider__controls">
+          <button class="slider__button-prev" type="button">
+            <svg class="button-prev-icon" aria-hidden="true" focusable="false" width="20" height="60"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z"/>
+            </svg>
+            <span class="visually-hidden">Предыдущий товар</span>
+          </button>
+          <button class="slider__button-next" type="button">
+            <svg class="button-next-icon" aria-hidden="true" focusable="false" width="20" height="60"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 60h3.5L20 30 3.5 0H0l16.2 30L0 60Z"/>
+            </svg>
+            <span class="visually-hidden">Следующий товар</span>
+          </button>
+        </div>
+        <img src="img/slider-image-3.png" alt="Палка для селфи" width="560" height="560">
+      </div>
+      <div class="slider__info-section">
+        <p class="slider__number">03</p>
+        <p class="slider__slogan">Делай селфи,<br>
+                                  как Бен Стиллер!</p>
+        <p class="slider__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
+                                       метров длиной и весом всего 5 кг.
+        </p>
+        <div class="paganation-wrapper">
+          <a href="#" class="button slider__link">подробнее</a>
+          <ol class="slider__pagination">
+            <li class="slider__pagination-item">
+              <button class="slider__pagination-button slider__pagination-button_current" type="button">
+                <span class="visually-hidden">слайд 1</span>
+              </button>
+            </li>
+            <li class="slider__pagination-item">
+              <button class="slider__pagination-button" type="button">
+                <span class="visually-hidden">слайд 2</span>
+              </button>
+            </li>
+            <li class="slider__pagination-item">
+              <button class="slider__pagination-button" type="button">
+                <span class="visually-hidden">слайд 3</span>
+              </button>
+            </li>
+          </ol>
+        </div>
+        <dl class="slider__specification">
+          <dd class="specification__definition">8,5 м</dd>
+          <dt class="specification__term">Длина палки</dt>
+          <dd class="specification__definition">5 кг</dd>
+          <dt class="specification__term">Вес палки</dt>
+          <dd class="specification__definition">Карбон</dd>
+          <dt class="specification__term">Материал</dt>
         </dl>
       </div>
     </section>
