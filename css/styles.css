@@ -271,17 +271,19 @@ input.navigation-user__input:focus:placeholder-shown {
 .navigation-user__cart-item::after {
   position: absolute;
   top: 20px;
-  left: 7px;
+  left: 28px;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
-  width: 21px;
+  min-width: 13px;
+  padding-right: 4px;
+  padding-left: 4px;
   font-size: 14px;
   line-height: 21px;
-  border-radius: 50%;
+  border-radius: 10px;
   background-color: #ffffff;
   content: "2";
-  transform: translateY(-50%);
+  transform: translate(-100%, -50%);
 }
 
 .navigation-user__cart-item:hover::after {
@@ -867,9 +869,22 @@ input.navigation-user__input:focus:placeholder-shown {
 
 /* свойства секции "services" */
 .service {
-  height: 288px;
-  margin: 100px 0 90px 0;
+  position: relative;
+  min-height: 320px;
+  margin: 100px 0 57px 0;
   background-color: #f0f0f0;
+}
+
+/* Маскирует нижнюю серую полосу блока service*/
+/* т.к. блок service не может быть высотой меньше 320px */
+.service::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 32px;
+  background-color: #ffffff;
+  content: "";
 }
 
 .service-wrapper {
@@ -878,7 +893,7 @@ input.navigation-user__input:focus:placeholder-shown {
   display: flex;
   align-items: center;
   flex-direction: row;
-  height: 320px;
+  min-height: 320px;
   margin-top: 0;
 }
 
@@ -945,8 +960,8 @@ input.navigation-user__input:focus:placeholder-shown {
 .tab-block {
   display: none;
   box-sizing: border-box;
-  height: 319px;
-  padding: 70px 65px 0 116px;
+  min-height: 319px;
+  padding: 70px 65px 20px 116px;
 }
 
 #delivery:checked ~ .service__panels .tab-block-delivery,
